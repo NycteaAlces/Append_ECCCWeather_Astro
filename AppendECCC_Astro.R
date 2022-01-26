@@ -8,18 +8,21 @@
 #
 
 library(shiny)
-library(tidyverse)
+
+if(!length("weathercan" %in%  installed.packages()[, "Package"])) install.packages("weathercan", repos = "https://ropensci.r-universe.dev") #CRAN repo was failing 20220125
 #function to install and load required packages
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+
   if (length(new.pkg))
     install.packages(new.pkg, dependencies = TRUE)
   sapply(pkg, require, character.only = TRUE)
 }
 
-#install.packages("weathercan", repos = "https://ropensci.r-universe.dev")
+
 # establish packages required
 packages <- c("weathercan", "dplyr", "tidyverse", "ggplot2", "naniar", "feedr","mapview","lunar","lutz", "sf")
+ipak(packages)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(

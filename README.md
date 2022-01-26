@@ -10,4 +10,4 @@
 #Posting on gitHub for personal use/needs, however the references may be useful to others for their applications
 
 #Added as a Shiny App. If ther eis interest I would be happy to modify the App to be used and applied to more generic 
-# datasources.
+#datasources.

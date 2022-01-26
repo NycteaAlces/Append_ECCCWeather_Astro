@@ -1,5 +1,6 @@
 #Created by Mike Russell (NycteaAlces) 2022/01/26 to manage a specific dataset
 
+#Note that the weathercan::stations_search() can be tedius and slow for datasets with a large number of observations/locations. I would recommend that users modify the code, develop a  
 #Directly calls on ECCC weathercan app, and suncalc app.
 #Application to evaluate influence of environmental factors that may influence observations, detections or occupancy.
 #Weather information relies on nearest weather station within date range, irregardless of parameters collected at the weather station except the criteria for hourly summaries. This instance uses the rounded hour/day and lat, long coordinates to assign the nearest weather station information. Currently ther eis no feature to optimize the selection of weather station basewd on filters such as comprehensive list of parameters. Hopefully this will be developed in a later version.
